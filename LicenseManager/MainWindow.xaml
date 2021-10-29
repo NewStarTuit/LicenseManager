@@ -1,0 +1,26 @@
+﻿<Window x:Class="LicenseManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LicenseManager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="3000,,,,00"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0" Grid.Row="0" Height="35" Width="200" Click="generate_new_license">Generate New License</Button>
+        <Button Grid.Column="1" Grid.Row="0" Height="35" Width="200" Click="verify_license_file">Verify License File</Button>
+        <TextBlock Grid.Column="0" Grid.Row="2" x:Name="license_key" TextWrapping="Wrap" />
+        <TextBlock Grid.Column="1" Grid.Row="2" x:Name="license_verify" TextWrapping="Wrap" />
+        <DatePicker x:Name="date_pick" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="181"/>
+    </Grid>
+</Window>
